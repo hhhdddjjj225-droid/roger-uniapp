@@ -1,77 +1,59 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{ title }}</text>
-		</view>
-		<button @click="handleClick">点我</button>
-		<text>当前计数：{{ totalNum }}</text>
-		<view v-for="item in list" :key="item.name">
-			<text>{{ item.name }}:{{ item.num }}</text>
-		</view>
-	</view>
+  <view class="content">
+    <navbar :isHome="true" />
+    <view style="margin-top: 130rpx;">
+      <view class="weui-cell" style="background:#fff9eb;">
+        <view class="weui-cell__hd">
+          <image src="/static/resource/images/ic-myapp.png"
+            style="display: block;width: 40rpx;height: 40rpx;margin-right: 14rpx;"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <text style="color: #be9719;font-size: 13rpx;">点击右下角“添加到我的小程序”，方便下次找到</text>
+        </view>
+        <view class="weui-cell__ft">
+          <image src="/static/resource/images/modal_closer.png" style="display: block;width: 15px;height: 15px;">
+          </image>
+        </view>
+      </view>
+    </view>
+  </view>
 </template>
 
-<script setup>不合格
-// export default {
-// 	data() {
-// 		return {
-// 			title: 'Hello'
-// 		}
-// 	},
-// 	onLoad() {
-
-// 	},
-// 	methods: {
-
-// 	}
-// }
-import { ref, reactive, computed } from 'vue'
-import { onLoad } from '@dcloudio/uni-app'
-const title = ref('Hello')
-const list = reactive([
-	{ name: 'apple', num: 1 },
-	{ name: 'orange', num: 2 },
-	{ name: 'banana', num: 3 }
-])
-const handleClick = () => {
-	list.forEach(item => {
-		item.num++
-	})
+<script setup>
+import { ref } from 'vue'
+const data = ref('动态数组')
+//跳转搜索页
+const navigaterTo = () => {
+  uni.navigateTo({
+    url: '/pages/search/index'
+  })
 }
-onLoad(() => {
-	console.log('onLoad声明周期');
-})
-//计算水果的总数
-const totalNum = computed(() => {
-	return list.reduce((pre, cur) => pre + cur.num, 0)
-})
 </script>
 
 <style>
 .content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-	height: 200rpx;
-	width: 200rpx;
-	margin-top: 200rpx;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 50rpx;
+  height: 200rpx;
+  width: 200rpx;
+  margin-top: 200rpx;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50rpx;
 }
 
 .text-area {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .title {
-	font-size: 36rpx;
-	color: #8f8f94;
+  font-size: 36rpx;
+  color: #8f8f94;
 }
 </style>
