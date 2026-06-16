@@ -59,7 +59,7 @@ icon {
 }
 
 .weui-cell {
-    padding: 10px 15px;
+    padding: 20rpx 30rpx;
     position: relative;
     display: -webkit-box;
     display: -webkit-flex;
@@ -86,6 +86,10 @@ icon {
 
 .weui-cell_active {
     background-color: #ececec;
+}
+
+.weui-cell__hd {
+    padding-right: 14rpx;
 }
 
 .weui-cell_primary {
@@ -1252,8 +1256,8 @@ icon {
     height: 27px;
 }
 
-i.weui-tabbar__icon,
-.weui-tabbar__icon > i {
+.weui-tabbar__icon--i,
+.weui-tabbar__icon > .weui-tabbar__icon--i {
     font-size: 24px;
     color: #999;
 }
