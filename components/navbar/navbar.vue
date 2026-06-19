@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, onBeforeMount, defineProps } from 'vue'
+import { ref, reactive, onBeforeMount, } from 'vue'
 const props = defineProps({
 	background: {
 		type: String,
@@ -56,9 +56,15 @@ const props = defineProps({
 		default: false
 	}
 })
+const emits = defineEmits(['navBarAttached'])
 onBeforeMount(() => {
 	setNavSize()
 	setStyle()
+	emits('navBarAttached', {
+		statusHeight: status.value,
+		navHeight: navHeight.value,
+		navBarHeight: status.value + navHeight.value
+	})
 })
 
 //状态栏高度

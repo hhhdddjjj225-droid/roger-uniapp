@@ -11,7 +11,8 @@ export default {
 		console.log('App Hide')
 	},
 	globalData: {
-		utils: utils
+		utils: utils,
+		orders_filt: ''
 	}
 }
 </script>

@@ -1,4 +1,10 @@
 {
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uni-(.*)": "@/uni_modules/uni-$1/components/uni-$1/uni-$1.vue"
+		}
+	},
 	"pages": [ 
 		{
 			"path": "pages/index/index",
@@ -10,7 +16,7 @@
 		{
 			"path": "pages/order/index",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "我的订单",
 				"navigationBarBackgroundColor": "#F8F8F8"
 			}
 		},
@@ -26,6 +32,31 @@
 			"style": {
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/hospital/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/index",
+			"style": {
+				"navigationBarTitleText": "填写服务订单"
+			}
+		},
+		{
+			"path": "pages/clients/index",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "订单详情"
 			}
 		}
 	],

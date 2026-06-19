@@ -26,20 +26,56 @@
         </block>
       </swiper>
     </view>
+    <!--快捷入口2个-->
     <view v-if="nav2s && nav2s.length > 0" class="nav2-list">
       <block v-for="(item, index) in nav2s" :key="index">
-        <view class="nav2-item" :data-index="index">
+        <view class="nav2-item" @click="onNav2Tap" :data-index="index">
           <view class="nav2-pic">
             <image :src="item.pic_image_url" mode="widthFix"></image>
           </view>
         </view>
       </block>
     </view>
+    <!--快捷入口多个-->
+    <view v-if="navs && navs.length > 0" class="nav-list">
+      <block v-for="(item, index) in navs" :key="index">
+        <view class="nav-item" @click="onNavTap" :data-index="index">
+          <view class="nav-pic">
+            <image :src="item.pic_image_url" mode="widthFix"></image>
+          </view>
+          <view class="nav-text" :style="'color:' + (item.color ? item.color : '')">
+            <text>{{ item.title }}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <!--医院列表-->
+    <view class="weui-cells hosp-list">
+      <view class="weui-cell hosp-item weui-cell_access" v-for="(item, index) in hospitals" :key="item.id"
+        :data-hid="item.id" @click="toHospital">
+        <view class="weui-cell_hd">
+          <image class="hosp-avatar" :src="item.avatar ? item.avatar_url : '../../static/resource/images/avatar.jpg'"
+            mode="aspectFill"></image>
+        </view>
+        <view class="weui-cell_bd">
+          <view>
+            <text class="hosp-name">{{ item.name }}</text>
+          </view>
+          <view class="hosp-line">
+            <text class="hosp-rank">{{ item.rank }}</text>
+            <text class="hosp-laber">{{ item.label }}</text>
+          </view>
+          <view class="hosp-line">
+            <text class="hosp-intro">{{ item.intro }}</text>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, toRaw } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
 
 const app = getApp()
@@ -47,7 +83,10 @@ const app = getApp()
 const slides = ref([])
 //快捷入口2
 const nav2s = ref([])
-
+//快捷入口多个
+const navs = ref([])
+//医院列表
+const hospitals = ref([])
 onLoad(() => {
 
   app.globalData.utils.getUserInfo()
@@ -66,11 +105,39 @@ onLoad(() => {
           console.log(data);
           slides.value = data.slides
           nav2s.value = data.nav2s
+          navs.value = data.navs
+          hospitals.value = data.hospitals
         }
       })
     }
   })
 })
+//跳转函数
+const jump = (nav, type) => {
+  //判断是否为内部链接
+  if (nav.stype == 1) {
+    uni.navigateTo({
+      url: nav.stype_link
+    })
+  }
+}
+//点击快捷入口2跳转
+const onNav2Tap = (e) => {
+  const nav = toRaw(nav2s.value)[e.currentTarget.dataset.index]
+  jump(nav, 'nav2s')
+}
+//点击快捷入口多个跳转
+const onNavTap = (e) => {
+  const nav = toRaw(navs.value)[e.currentTarget.dataset.index]
+  jump(nav, 'navs')
+}
+//点击医院列表下详情跳转
+const toHospital = (e) => {
+  uni.navigateTo({
+    url: '../hospital/index?hid=' + e.currentTarget.dataset.hid
+  })
+}
+
 </script>
 
 <style>
