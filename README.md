@@ -32,6 +32,7 @@
 ### 验证码校验
 
 <!-- 在此插入手机号验证码发送、倒计时、校验等演示 GIF -->
+<img width="525" height="889" alt="动画 (10)" src="https://github.com/user-attachments/assets/86d476e4-a7d1-49bf-84ea-e64e31effece" /><img width="525" height="889" alt="动画 (11)" src="https://github.com/user-attachments/assets/c8c7a9d1-260a-4b4c-8ebe-6339cb05c05e" />
 
 
 ### 二维码支付
@@ -43,6 +44,7 @@
 ### 分享转发
 
 <!-- 在此插入分享弹窗、微信好友分享等演示 GIF -->
+<img width="525" height="889" alt="动画 (11)" src="https://github.com/user-attachments/assets/5ebef7d3-4826-4b6f-80f8-40f4dd95d022" />
 
 
 
