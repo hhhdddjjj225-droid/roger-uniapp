@@ -1,3 +1,4 @@
+
 # 医疗服务预约小程序
 
 > 基于 uni-app + Vue 3 开发的跨端医疗服务预约平台，支持微信小程序、H5、App 等多端运行。
@@ -27,14 +28,16 @@
 <img width="545" height="886" alt="动画 (8)" src="https://github.com/user-attachments/assets/25fa9a81-fb5b-4a7b-8533-ebe7d8d9a3a8" />
 
 
-### 二维码支付
-
-<!-- 在此插入支付二维码生成、扫码支付等演示 GIF -->
-
 
 ### 验证码校验
 
 <!-- 在此插入手机号验证码发送、倒计时、校验等演示 GIF -->
+
+
+### 二维码支付
+
+<!-- 在此插入支付二维码生成、扫码支付等演示 GIF -->
+<img width="525" height="889" alt="动画 (9)" src="https://github.com/user-attachments/assets/236b6834-38d9-4894-9cb2-6445e381db69" />
 
 
 ### 分享转发
@@ -165,4 +168,4 @@ npm run build:app
 ## 许可证
 
 [MIT](LICENSE)
-<img width="545" height="886" alt="动画 (8)" src="https://github.com/user-attachments/assets/68b1bdef-d39b-4567-9b2c-d10f251253fa" />
+
