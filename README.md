@@ -16,7 +16,6 @@
 - **地图服务**: 腾讯地图（地址定位与导航）
 - **二维码**: UQRCode（支付二维码生成）
 - **版本控制**: Git
-<img width="545" height="886" alt="动画 (8)" src="https://github.com/user-attachments/assets/327d2722-741d-446a-b366-92909a89cf57" />
 
 ## 效果演示
 
@@ -27,7 +26,8 @@
 <!-- 在此插入医院定位、地图导航等演示 GIF -->
 <p align="center">
   <img src="./screenshots/navigation.gif" alt="地图导航" width="300" />
-</p>
+</p>![Uploading 动画 (8).gif…]()
+
 
 ### 二维码支付
 
