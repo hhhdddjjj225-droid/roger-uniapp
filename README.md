@@ -24,29 +24,24 @@
 ### 地图导航
 
 <!-- 在此插入医院定位、地图导航等演示 GIF -->
-![Uploading 动画 (8).gif…]()
+<img width="545" height="886" alt="动画 (8)" src="https://github.com/user-attachments/assets/25fa9a81-fb5b-4a7b-8533-ebe7d8d9a3a8" />
 
 
 ### 二维码支付
 
 <!-- 在此插入支付二维码生成、扫码支付等演示 GIF -->
-<p align="center">
-  <img src="./screenshots/qrcode-payment.gif" alt="二维码支付" width="300" />
-</p>
+
 
 ### 验证码校验
 
 <!-- 在此插入手机号验证码发送、倒计时、校验等演示 GIF -->
-<p align="center">
-  <img src="./screenshots/verify-code.gif" alt="验证码校验" width="300" />
-</p>
+
 
 ### 分享转发
 
 <!-- 在此插入分享弹窗、微信好友分享等演示 GIF -->
-<p align="center">
-  <img src="./screenshots/share.gif" alt="分享转发" width="300" />
-</p>
+
+
 
 ## 功能特点
 
