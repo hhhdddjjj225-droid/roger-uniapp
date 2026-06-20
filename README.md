@@ -24,9 +24,7 @@
 ### 地图导航
 
 <!-- 在此插入医院定位、地图导航等演示 GIF -->
-<p align="center">
-  <img src="./screenshots/navigation.gif" alt="地图导航" width="300" />
-</p>![Uploading 动画 (8).gif…]()
+![Uploading 动画 (8).gif…]()
 
 
 ### 二维码支付
